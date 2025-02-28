@@ -3,35 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css">
     <link href="https://api.fontshare.com/v2/css?f[]=erode@400&f[]=tanker@400&f[]=neco@400&f[]=pally@500&display=swap" rel="stylesheet">
-    <link href="https://api.fontshare.com/v2/css?f[]=striper@400&f[]=array@401&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=striper@400&f[]=array@401&display=swap" rel="stylesheet"> -->
+    <link href="./src/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Animesh Singh</title>
 </head>
-<body>
-
-    <div class="topnav">
-        <h1>AS</h1>
-
-
-        <ul class="menuitems">
-            <li><button onclick="scrollToDiv('intro-div')">Home</button></li>
-            <li><button onclick="scrollToDiv('about-me')">About</button></li>
-            <!-- <li><button>Projects</button></li> -->
-            <li><button onclick="scrollToDiv('contact')">Contact</button></li>
+<body class="flex flex-col" gap-50>
+    <div class="fixed top-0 left-0 w-full h-[10vh] bg-[#fffffe] flex items-center px-5 z-[1000]">
+        <h1 class=" text-4xl font-bold  text-[#094067]">AS</h1>
+        <ul class="flex items-center space-x-5 ml-auto">
+            <li><button class="text-2xl bg-[#3da9fc] text-[#fffffe] py-1 px-2 rounded" onclick="scrollToDiv('intro-div')">Home</button></li>
+            <li><button class="text-2xl bg-[#3da9fc] text-[#fffffe] py-1 px-2 rounded" onclick="scrollToDiv('about-me')">About</button></li>
+            <li><button class="text-2xl bg-[#3da9fc] text-[#fffffe] py-1 px-2 rounded" onclick="scrollToDiv('contact')">Contact</button></li>
         </ul>
 
     </div>
 
-    <div class="intro-div" id="intro-div">
+    <div class="flex flex-row justify-center items-center h-screen gap-x-80 bg-[#16161a] text-[#fffffe]" id="intro-div">
         
-        <div class="intro">
-            <h1>Hi, I'm <span>Animesh</span></h1>
-            <p id="role">Business Analyst </p>
-            <p class="summary"> I am a Business Analyst currently working at Enverus.</p>
+        <div class="flex flex-col  items-center intro pb-30 gap-5">
+            <h1 class="text-5xl font-bold">Hi, I'm <span>Animesh</span></h1>
+            <p id="role" class="text-5xl">Business Analyst </p>
+            <p class="text-2xl"> I am a Business Analyst currently working at Enverus.</p>
             
-            <div class="social-resume">
-                <div class="social">
+            <div class="flex flex-col gap-5 justify-center items-center">
+                <div class="flex flex-row gap-10">
                     <a href="https://github.com/SinghSensai"  class="github" target="_blank" rel="noopener noreferrer">
                         <img alt="" src="https://img.icons8.com/doodle/40/000000/github--v1.png">
                     </a>
@@ -41,7 +39,7 @@
                     </a>
                 </div>
 
-                <div class="resume">
+                <div class="bg-[#7f5af0] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     <a href="https://drive.google.com/uc?export=download&id=1AcxCw5IB_KrUuefiDpRSobkDLvnSxyZu"> Resume</a>
 
                 </div>
@@ -51,70 +49,72 @@
         </div>
 
         <!-- <img src="public\pixeltrue-support-1.svg" alt="Animesh"> -->
-        <dotlottie-player src="https://lottie.host/57d03694-23c5-452e-a0fb-76c2c5d03a9e/7OXe4J1QSO.lottie"  loop autoplay></dotlottie-player>
+        <div>
+            <dotlottie-player class="w-full h-auto" src="https://lottie.host/57d03694-23c5-452e-a0fb-76c2c5d03a9e/7OXe4J1QSO.lottie"  loop autoplay></dotlottie-player>
+        </div>
 
     </div>
 
 
-    <div class="about-me" id="about-me">
+    <div class="flex flex-col items-center ml-10 mr-10" id="about-me">
 
-        <h1>About Me</h1>
-        <div class="about">
-            <h2 class="about-header">
+        <h1 class="text-4xl font-bold">About Me</h1>
+        <div class="about mt-10">
+            <h2 class="text-3xl font-bold">
                 Who am I?
             </h2>
-            <p> I am a highly analytical and process-oriented Data Analyst with expertise in business and data analysis, Python programming, and cloud computing. With experience as a Business Analyst at Enverus and a background in freelancing, I have developed automation solutions, predictive cost modeling, and business intelligence reports using tools like Power BI and SQL. My technical proficiency extends to Golang, AWS, and natural language processing with Hugging Face models. Passionate about leveraging data-driven insights, I thrive in solving complex problems and continuously expanding my knowledge in analytics and AI-driven solutions.</p>
+            <p class="text-xl pt-10"> I am a highly analytical and process-oriented Data Analyst with expertise in business and data analysis, Python programming, and cloud computing. With experience as a Business Analyst at Enverus and a background in freelancing, I have developed automation solutions, predictive cost modeling, and business intelligence reports using tools like Power BI and SQL. My technical proficiency extends to Golang, AWS, and natural language processing with Hugging Face models. Passionate about leveraging data-driven insights, I thrive in solving complex problems and continuously expanding my knowledge in analytics and AI-driven solutions.</p>
 
-            <h2 class="tech-tools">Technology and Tools</h2>
+            <h2 class="text-3xl font-bold pt-10">Technology and Tools</h2>
 
-            <div class="all-tools">
+            <div class="grid grid-cols-4 grid-rows-2 gap-10 mt-10 ml-10">
 
-                <div class="tool">
+                <div class="flex flex-row items-center">
                     
-                    <img class="tool-img" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                    <img class="w-1/5 h-auto" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
                     <h4 class="tool-name">Python</h4>
 
                 </div>
-                <div class="tool">
+                <div class="flex flex-row items-center">
                     
-                    <img class="tool-img" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />
+                    <img class="w-1/5 h-auto" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />
                     <h4 class="tool-name">Golang</h4>
 
                 </div>
-                <div class="tool">
+                <div class="flex flex-row items-center">
                     
-                    <img class="tool-img" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
+                    <img class="w-1/5 h-auto" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
                     <h4 class="tool-name">AWS</h4>
 
                 </div>
 
-                <div class="tool">
+                <div class="flex flex-row items-center">
                     
-                    <img class="tool-img" alt="python" src="https://img.icons8.com/?size=100&id=Ny0t2MYrJ70p&format=png&color=000000" />
+                    <img class="w-1/5 h-auto" alt="python" src="https://img.icons8.com/?size=100&id=Ny0t2MYrJ70p&format=png&color=000000" />
                     <h4 class="tool-name">Power BI</h4>
 
                 </div>
-                <div class="tool">
+                <div class="flex flex-row items-center">
                     
-                    <img class="tool-img" alt="python" src="public/Langchain--Streamline-Simple-Icons.svg"/>
+                    <img class="w-1/5 h-auto" alt="python" src="public/Langchain--Streamline-Simple-Icons.svg"/>
                     <h4 class="tool-name">LangChain</h4>
 
                 </div>
-                <div class="tool">
+                <div class="flex flex-row items-center">
                     
-                    <img class="tool-img" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+                    <img class="w-1/5 h-auto" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
                     <h4 class="tool-name">SQL</h4>
 
                 </div>
-                <div class="tool">
+                <div class="flex flex-row items-center">
                     
-                    <img class="tool-img" alt="python" src="https://img.icons8.com/?size=100&id=117561&format=png&color=000000" />
+                    <img class="w-1/5 h-auto" alt="python" src="https://img.icons8.com/?size=100&id=117561&format=png&color=000000" />
                     <h4 class="tool-name">MS Excel</h4>
 
                 </div>
-                <div class="tool">
+                <div class="flex flex-row items-center">
                     
-                    <img class="tool-img" alt="python" src="public/Hugging Face_idJ6-I79C__1.png" />
+                    <img class="w-1/5 h-auto" alt="python" src="public/Hugging Face_idJ6-I79C__1.png" />
                     <h4 class="tool-name">HuggingFace</h4>
 
                 </div>
@@ -124,29 +124,34 @@
     </div>
 
 
-    <div class="contact" id="contact">
-        <div class="contact-info">
+    <div class="flex flex-col  mt-20 px-10" id="contact">
+        <div class="flex flex-col md:flex-row gap-10 items-center justify-between w-full">
             
-            <div class="add-info">
-                <h1>Contact Me</h1>
-                <h2>Address:</h2>
-                <p> Jehanabad, Bihar, India, 804417</p>
-                <h2>Contact Number:</h2>
-                <p> +91 843 445 197</p>
-
-                <h2>Email:</h2>
+           
+            <div class="add-info text-center md:text-left">
+                <h1 class="text-4xl font-bold mb-4">Contact Me</h1>
+                <h2 class="text-lg font-semibold">Address:</h2>
+                <p>Jehanabad, Bihar, India, 804417</p>
+    
+                <h2 class="text-lg font-semibold mt-4">Contact Number:</h2>
+                <p>+91 843 445 197</p>
+    
+                <h2 class="text-lg font-semibold mt-4">Email:</h2>
                 <p>animeshsingh161@gmail.com</p>
-
             </div>
-
-            <div class="contactme-img">
-  
-                <dotlottie-player src="https://lottie.host/0ef8672c-8629-42dd-be6b-195c73d22b17/o8E7s68ajx.lottie"  speed="3" loop autoplay></dotlottie-player>
+    
+            
+            <div class="w-full md:w-1/2 flex justify-end">
+                <dotlottie-player 
+                    class="w-full max-w-sm h-auto"
+                    src="https://lottie.host/0ef8672c-8629-42dd-be6b-195c73d22b17/o8E7s68ajx.lottie"  
+                    speed="3" loop autoplay>
+                </dotlottie-player>
             </div>
-
+    
         </div>
     </div>
-
+    
     <script  src="scripts/main.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
 
