@@ -3,132 +3,126 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="styles.css">
-    <link href="https://api.fontshare.com/v2/css?f[]=erode@400&f[]=tanker@400&f[]=neco@400&f[]=pally@500&display=swap" rel="stylesheet">
-    <link href="https://api.fontshare.com/v2/css?f[]=striper@400&f[]=array@401&display=swap" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=kola@400&display=swap" rel="stylesheet">
     <link href="./src/output.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Animesh Singh</title>
 </head>
-<body class="flex flex-col" gap-50>
-    <div class="fixed top-0 left-0 w-full h-[10vh] bg-[#fffffe] flex items-center px-5 z-[1000]">
-        <h1 class=" text-4xl font-bold  text-[#094067]">AS</h1>
+<body class="flex flex-col bg-[#16161a]" gap-50>
+
+
+    <nav class="fixed top-0 left-0 w-full h-[10vh] bg-[#16161a] flex items-center px-5 z-[1000] font-['Courier'] ">
+        <h1 class="text-3xl   text-[#fffffe] ml-5">AS</h1>
         <ul class="flex items-center space-x-5 ml-auto">
-            <li><button class="text-2xl bg-[#3da9fc] text-[#fffffe] py-1 px-2 rounded" onclick="scrollToDiv('intro-div')">Home</button></li>
-            <li><button class="text-2xl bg-[#3da9fc] text-[#fffffe] py-1 px-2 rounded" onclick="scrollToDiv('about-me')">About</button></li>
-            <li><button class="text-2xl bg-[#3da9fc] text-[#fffffe] py-1 px-2 rounded" onclick="scrollToDiv('contact')">Contact</button></li>
+            <li><button class="text-3xl  text-[#fffffe]" onclick="scrollToDiv('intro-div')">Home</button></li>
+            <li class="text-3xl  text-[#fffffe]" onclick="scrollToDiv('intro-div')">|</li>
+            <li><button class="text-3xl  text-[#fffffe]" onclick="scrollToDiv('about-me')">About</button></li>
+            <li class="text-3xl  text-[#fffffe]" onclick="scrollToDiv('intro-div')">|</li>
+            <li><button class="text-3xl  text-[#fffffe]" onclick="scrollToDiv('contact')">Contact</button></li>
         </ul>
+        <h1 class=" text-3xl   text-[#fffffe] ml-5 flex items-center space-x-5 ml-auto mr-5" id="current-time">Time</h1>
 
-    </div>
+    </nav>
 
-    <div class="flex flex-row justify-center items-center h-screen gap-x-80 bg-[#16161a] text-[#fffffe]" id="intro-div">
+    <div class="flex flex-row justify-center items-center h-screen gap-x-80 bg-black text-[#fffffe] " id=intro-div>
         
-        <div class="flex flex-col  items-center intro pb-30 gap-5">
-            <h1 class="text-5xl font-bold">Hi, I'm <span>Animesh</span></h1>
-            <p id="role" class="text-5xl">Business Analyst </p>
+        <div class="flex flex-col  items-center intro pb-30 gap-5 justify-center"  id="intro">
+            <h1 class="text-5xl" id="">Hi, I'm <span class="bg-gradient-to-r from-slate-100 via-violet-600 to-indigo-600 bg-clip-text text-transparent ">Animesh</span></h1>
+            <p id="role" class="text-4xl font-['Courier']"></p>
             <p class="text-2xl"> I am a Business Analyst currently working at Enverus.</p>
             
             <div class="flex flex-col gap-5 justify-center items-center">
-                <div class="flex flex-row gap-10">
-                    <a href="https://github.com/SinghSensai"  class="github" target="_blank" rel="noopener noreferrer">
-                        <img alt="" src="https://img.icons8.com/doodle/40/000000/github--v1.png">
+                <div class="flex flex-row gap-10 justify-center">
+                    <a href="https://github.com/SinghSensai" target="_blank" rel="noopener noreferrer" class="inline-flex w-fit">
+                        <img class="w-12 h-12 hover:scale-110" alt="GitHub" src="https://img.icons8.com/?size=100&id=46565&format=png&color=000000">
                     </a>
-                    <a href="https://www.linkedin.com/in/animeshsingh161/" class="linedin" target="_blank" rel="noopener noreferrer">
-
-                        <img alt="" src="https://img.icons8.com/doodle/40/000000/linkedin--v2.png">
+                    <a href="https://www.linkedin.com/in/animeshsingh161/" target="_blank" rel="noopener noreferrer" class="inline-flex w-fit">
+                        <img class="w-12 h-12 hover:scale-110" alt="LinkedIn" src="https://img.icons8.com/?size=100&id=xuvGCOXi8Wyg&format=png&color=000000">
+                    </a>
+                    <a href="https://leetcode.com/u/animeshsingh161/" target="_blank" rel="noopener noreferrer" class="inline-flex w-fit">
+                        <img class="w-12 h-12 hover:scale-110" alt="LeetCode" src="https://img.icons8.com/?size=100&id=fiCYSJOnXi7E&format=png&color=000000">
                     </a>
                 </div>
-
-                <div class="bg-[#7f5af0] hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    <a href="https://drive.google.com/uc?export=download&id=1AcxCw5IB_KrUuefiDpRSobkDLvnSxyZu"> Resume</a>
-
-                </div>
+                <a href="https://drive.google.com/uc?export=download&id=1AcxCw5IB_KrUuefiDpRSobkDLvnSxyZu"
+                   class="bg-[#ff8906] hover:bg-blue-700 text-[#fffffe] font-bold py-2 px-4 rounded cursor-pointer text-center w-full max-w-xs">
+                    Resume
+                </a>
             </div>
-
-
         </div>
-
+        
         <!-- <img src="public\pixeltrue-support-1.svg" alt="Animesh"> -->
-        <div>
+        <div class="illustration">
             <dotlottie-player class="w-full h-auto" src="https://lottie.host/57d03694-23c5-452e-a0fb-76c2c5d03a9e/7OXe4J1QSO.lottie"  loop autoplay></dotlottie-player>
         </div>
 
     </div>
 
 
-    <div class="flex flex-col items-center ml-10 mr-10" id="about-me">
+    <div class="flex flex-col items-center  h-screen bg-[#0f0e17] rounded-xl " id="about-me">
 
-        <h1 class="text-4xl font-bold">About Me</h1>
-        <div class="about mt-10">
-            <h2 class="text-3xl font-bold">
+        <h1 class="text-4xl font-bold mt-10 text-[#fffffe]">About Me</h1>
+        <div class="about mt-10 pl-10 pr-10">
+            <h2 class="text-3xl font-bold text-[#fffffe]">
                 Who am I?
             </h2>
-            <p class="text-xl pt-10"> I am a highly analytical and process-oriented Data Analyst with expertise in business and data analysis, Python programming, and cloud computing. With experience as a Business Analyst at Enverus and a background in freelancing, I have developed automation solutions, predictive cost modeling, and business intelligence reports using tools like Power BI and SQL. My technical proficiency extends to Golang, AWS, and natural language processing with Hugging Face models. Passionate about leveraging data-driven insights, I thrive in solving complex problems and continuously expanding my knowledge in analytics and AI-driven solutions.</p>
+            <p class="text-xl pt-10 text-[#a7a9be]"> I am a highly analytical and process-oriented Data Analyst with expertise in business and data analysis, Python programming, and cloud computing. With experience as a Business Analyst at Enverus and a background in freelancing, I have developed automation solutions, predictive cost modeling, and business intelligence reports using tools like Power BI and SQL. My technical proficiency extends to Golang, AWS, and natural language processing with Hugging Face models. Passionate about leveraging data-driven insights, I thrive in solving complex problems and continuously expanding my knowledge in analytics and AI-driven solutions.</p>
 
-            <h2 class="text-3xl font-bold pt-10">Technology and Tools</h2>
+            <h2 class="text-3xl font-bold pt-10 text-[#fffffe]">Technology and Tools</h2>
 
-            <div class="grid grid-cols-4 grid-rows-2 gap-10 mt-10 ml-10">
-
-                <div class="flex flex-row items-center">
-                    
-                    <img class="w-1/5 h-auto" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
-                    <h4 class="tool-name">Python</h4>
-
+            <div class="flex justify-center">
+                <div class="overflow-hidden flex flex-col items-center mt-10">
+                    <div class="flex space-x-10 w-max animate-left">
+                        <div class="flex items-center bg-[#7f5af0] text-[#fffffe] rounded-lg p-5 text-xl gap-5">
+                            <img alt="img" class="w-10 h-10" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" />
+                            <h4>Python</h4>
+                        </div>
+                        <div class="flex items-center bg-[#7f5af0] text-[#fffffe] rounded-lg p-5 text-xl gap-5">
+                            <img alt="img" class="w-10 h-10" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />
+                            <h4>Golang</h4>
+                        </div>
+                        <div class="flex items-center bg-[#7f5af0] text-[#fffffe] rounded-lg p-5 text-xl gap-5">
+                            <img alt="img" class="w-10 h-10" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
+                            <h4>AWS</h4>
+                        </div>
+                        <div class="flex items-center bg-[#7f5af0] text-[#fffffe] rounded-lg p-5 text-xl gap-5">
+                            <img alt="img" class="w-10 h-10" src="https://img.icons8.com/?size=100&id=Ny0t2MYrJ70p&format=png&color=000000" />
+                            <h4>Power BI</h4>
+                        </div>
+                    </div>
+            
+                    <div class="flex space-x-10 w-max mt-5 animate-right">
+                        <div class="flex items-center bg-[#7f5af0] text-[#fffffe] rounded-lg p-5 text-xl gap-5">
+                            <img alt="img" class="w-10 h-10" src="public/Langchain--Streamline-Simple-Icons.svg"/>
+                            <h4>LangChain</h4>
+                        </div>
+                        <div class="flex items-center bg-[#7f5af0] text-[#fffffe] rounded-lg p-5 text-xl gap-5">
+                            <img alt="img" class="w-10 h-10" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+                            <h4>SQL</h4>
+                        </div>
+                        <div class="flex items-center bg-[#7f5af0] text-[#fffffe] rounded-lg p-5 text-xl gap-5">
+                            <img alt="img" class="w-10 h-10" src="https://img.icons8.com/?size=100&id=117561&format=png&color=000000" />
+                            <h4>MS Excel</h4>
+                        </div>
+                        <div class="flex items-center bg-[#7f5af0] text-[#fffffe] rounded-lg p-5 text-xl gap-5">
+                            <img alt="img" class="w-10 h-10" src="public/Hugging Face_idJ6-I79C__1.png" />
+                            <h4>HuggingFace</h4>
+                        </div>
+                    </div>
                 </div>
-                <div class="flex flex-row items-center">
-                    
-                    <img class="w-1/5 h-auto" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original-wordmark.svg" />
-                    <h4 class="tool-name">Golang</h4>
-
-                </div>
-                <div class="flex flex-row items-center">
-                    
-                    <img class="w-1/5 h-auto" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" />
-                    <h4 class="tool-name">AWS</h4>
-
-                </div>
-
-                <div class="flex flex-row items-center">
-                    
-                    <img class="w-1/5 h-auto" alt="python" src="https://img.icons8.com/?size=100&id=Ny0t2MYrJ70p&format=png&color=000000" />
-                    <h4 class="tool-name">Power BI</h4>
-
-                </div>
-                <div class="flex flex-row items-center">
-                    
-                    <img class="w-1/5 h-auto" alt="python" src="public/Langchain--Streamline-Simple-Icons.svg"/>
-                    <h4 class="tool-name">LangChain</h4>
-
-                </div>
-                <div class="flex flex-row items-center">
-                    
-                    <img class="w-1/5 h-auto" alt="python" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
-                    <h4 class="tool-name">SQL</h4>
-
-                </div>
-                <div class="flex flex-row items-center">
-                    
-                    <img class="w-1/5 h-auto" alt="python" src="https://img.icons8.com/?size=100&id=117561&format=png&color=000000" />
-                    <h4 class="tool-name">MS Excel</h4>
-
-                </div>
-                <div class="flex flex-row items-center">
-                    
-                    <img class="w-1/5 h-auto" alt="python" src="public/Hugging Face_idJ6-I79C__1.png" />
-                    <h4 class="tool-name">HuggingFace</h4>
-
-                </div>
-
             </div>
         </div>
     </div>
 
 
-    <div class="flex flex-col  mt-20 px-10" id="contact">
+    <div class="flex flex-col   pl-10 text-[#fffffe]" id="contact">
         <div class="flex flex-col md:flex-row gap-10 items-center justify-between w-full">
             
            
-            <div class="add-info text-center md:text-left">
+            <div class="add-info text-center md:text-left" id="contact">
                 <h1 class="text-4xl font-bold mb-4">Contact Me</h1>
                 <h2 class="text-lg font-semibold">Address:</h2>
                 <p>Jehanabad, Bihar, India, 804417</p>
@@ -151,6 +145,9 @@
     
         </div>
     </div>
+    <footer class="bg-gray-900 text-white text-center py-4 mt-10">
+        <p class="text-sm">&copy; Created by Animesh Singh.</p>
+    </footer>
     
     <script  src="scripts/main.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
