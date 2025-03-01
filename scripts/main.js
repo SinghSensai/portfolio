@@ -94,14 +94,15 @@ window.addEventListener('scroll', () => {
 });
 
 
-setInterval(() => {
-    currentTime = new Date().toLocaleTimeString();
-    document.getElementById("current-time").textContent = currentTime;
-}, 1000);
+// setInterval(() => {
+//     currentTime = new Date().toLocaleTimeString();
+//     document.getElementById("current-time").textContent = currentTime;
+// }, 1000);
 
 function scrollToDiv(div) {
     document.getElementById(div).scrollIntoView({ behavior: "smooth" });
 }
+
 
 
 

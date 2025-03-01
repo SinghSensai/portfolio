@@ -9,31 +9,39 @@
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="https://api.fontshare.com/v2/css?f[]=kola@400&display=swap" rel="stylesheet">
     <link href="./src/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Animesh Singh</title>
 </head>
 <body class="flex flex-col bg-[#16161a]" gap-50>
 
 
-    <nav class="fixed top-0 left-0 w-full h-[10vh] bg-[#16161a] flex items-center px-5 z-[1000] font-['Courier'] ">
-        <h1 class="text-3xl   text-[#fffffe] ml-5">AS</h1>
-        <ul class="flex items-center space-x-5 ml-auto">
-            <li><button class="text-3xl  text-[#fffffe]" onclick="scrollToDiv('intro-div')">Home</button></li>
-            <li class="text-3xl  text-[#fffffe]" onclick="scrollToDiv('intro-div')">|</li>
-            <li><button class="text-3xl  text-[#fffffe]" onclick="scrollToDiv('about-me')">About</button></li>
-            <li class="text-3xl  text-[#fffffe]" onclick="scrollToDiv('intro-div')">|</li>
-            <li><button class="text-3xl  text-[#fffffe]" onclick="scrollToDiv('contact')">Contact</button></li>
+    <nav class="fixed top-0 left-0 w-full h-[10vh] bg-[#091121] flex items-center px-5 z-[1000] bg-opacity-50 drop-shadow-xl">
+        <h1 class="text-5xl font-bold  text-[#fffffe] ml-5 underline underline-offset-4 decoration-[#7f5af0] ">a.</h1>
+        <ul class="flex items-center space-x-5 ml-auto  px-5 py-2">
+            <li class="text-xl text-white hover:bg-white/10 p-3 rounded-full font-sans flex items-center gap-2 cursor-pointer">
+                <img src="https://img.icons8.com/?size=100&id=g1VKFeZ7mFa2&format=png&color=000000" alt="Home Icon" class="w-6 h-6">
+                <button onclick="scrollToDiv('intro-div')">Home</button>
+            </li>
+            <li class="text-xl text-white hover:bg-white/10 p-3 rounded-full font-sans flex items-center gap-2 cursor-pointer">
+                <img src="https://img.icons8.com/?size=100&id=A21WjJlVSGoO&format=png&color=000000" alt="Home Icon" class="w-6 h-6">
+                <button onclick="scrollToDiv('about-me')">About</button>
+            </li>
+            <li class="text-xl text-white hover:bg-white/10 p-3 rounded-full font-sans flex items-center gap-2 cursor-pointer">
+                <img src="https://img.icons8.com/?size=100&id=13826&format=png&color=000000" alt="Home Icon" class="w-6 h-6">
+                <button onclick="scrollToDiv('contact')">Contact</button>
+            </li>
         </ul>
-        <h1 class=" text-3xl   text-[#fffffe] ml-5 flex items-center space-x-5 ml-auto mr-5" id="current-time">Time</h1>
+        <!-- <h1 class=" text-xl   text-[#fffffe] ml-5 flex items-center space-x-5 ml-auto mr-5 font-sans" id="current-time">Time</h1> -->
 
     </nav>
 
-    <div class="flex flex-row justify-center items-center h-screen gap-x-80 bg-black text-[#fffffe] " id=intro-div>
+    <div class="flex flex-row justify-center items-center h-screen gap-x-20 bg-[#091121] text-[#fffffe] " id=intro-div>
         
         <div class="flex flex-col  items-center intro pb-30 gap-5 justify-center"  id="intro">
             <h1 class="text-5xl" id="">Hi, I'm <span class="bg-gradient-to-r from-slate-100 via-violet-600 to-indigo-600 bg-clip-text text-transparent ">Animesh</span></h1>
-            <p id="role" class="text-4xl font-['Courier']"></p>
-            <p class="text-2xl"> I am a Business Analyst currently working at Enverus.</p>
+            <p id="role" class="text-4xl font-mono"></p>
+            <p class="text-2xl font-sans"> I'm a Business Analyst currently working at <a href="https://www.enverus.com " rel="noopener noreferrer" class="text-green-400 hover:underline" target="_blank">Enverus</a>.</p>
             
             <div class="flex flex-col gap-5 justify-center items-center">
                 <div class="flex flex-row gap-10 justify-center">
@@ -46,17 +54,52 @@
                     <a href="https://leetcode.com/u/animeshsingh161/" target="_blank" rel="noopener noreferrer" class="inline-flex w-fit">
                         <img class="w-12 h-12 hover:scale-110" alt="LeetCode" src="https://img.icons8.com/?size=100&id=fiCYSJOnXi7E&format=png&color=000000">
                     </a>
+                    <a href="https://medium.com/@animeshsingh161" target="_blank" rel="noopener noreferrer" class="inline-flex w-fit">
+                        <img class="w-12 h-12 hover:scale-110" alt="LeetCode" src="https://img.icons8.com/?size=100&id=VlAoafiMkWGe&format=png&color=000000">
+                    </a>
                 </div>
                 <a href="https://drive.google.com/uc?export=download&id=1AcxCw5IB_KrUuefiDpRSobkDLvnSxyZu"
-                   class="bg-[#ff8906] hover:bg-blue-700 text-[#fffffe] font-bold py-2 px-4 rounded cursor-pointer text-center w-full max-w-xs">
+                   class="bg-[#ff8906] hover:bg-blue-700 text-[#fffffe] font-bold py-2 px-4 rounded cursor-pointer text-center w-full max-w-xs animate-bounce">
                     Resume
                 </a>
             </div>
         </div>
+
+        <div class="code-window bg-[#091121] w-[600px] rounded-lg shadow-lg mr-10 overflow-hidden border-2 border-[#38cfa2] ">
+            <!-- Window Header -->
+            <div class="window-header flex items-center px-2 py-2 bg-[#0a2338] rounded-t-lg">
+                <div class="window-dot bg-red-500 w-3 h-3 rounded-full ml-2"></div>
+                <div class="window-dot bg-yellow-500 w-3 h-3 rounded-full ml-2"></div>
+                <div class="window-dot bg-green-500 w-3 h-3 rounded-full ml-2"></div>
+                <span class="ml-4 text-sm text-gray-400 flex items-center gap-2">
+                    <i class="fas fa-code"></i> analyst.py
+                </span>
+            </div>
         
-        <!-- <img src="public\pixeltrue-support-1.svg" alt="Animesh"> -->
-        <div class="illustration">
-            <dotlottie-player class="w-full h-auto" src="https://lottie.host/57d03694-23c5-452e-a0fb-76c2c5d03a9e/7OXe4J1QSO.lottie"  loop autoplay></dotlottie-player>
+            <!-- Code Block -->
+            <div class="p-2 bg-[#091121] rounded-b-lg">
+                <pre class="text-sm text-white language-python whitespace-pre-wrap break-words overflow-x-auto"><code class="language-python">from pydantic import BaseModel
+from typing import List
+
+class Profile(BaseModel):
+    name: str
+    title: str
+    hard_worker: bool
+    quick_learner: bool
+    problem_solver: bool
+    years_of_experience: int
+
+profile = Profile(
+    name="Animesh",
+    skills=["LangChain", "Python", "AWS", "SQL"],
+    hard_worker=True,
+    quick_learner=True,
+    problem_solver=True,
+    years_of_experience=2
+)
+
+print(profile)</code></pre>
+            </div>
         </div>
 
     </div>
@@ -67,7 +110,7 @@
         <h1 class="text-4xl font-bold mt-10 text-[#fffffe]">About Me</h1>
         <div class="about mt-10 pl-10 pr-10">
             <h2 class="text-3xl font-bold text-[#fffffe]">
-                Who am I?
+                Who am I ?
             </h2>
             <p class="text-xl pt-10 text-[#a7a9be]"> I am a highly analytical and process-oriented Data Analyst with expertise in business and data analysis, Python programming, and cloud computing. With experience as a Business Analyst at Enverus and a background in freelancing, I have developed automation solutions, predictive cost modeling, and business intelligence reports using tools like Power BI and SQL. My technical proficiency extends to Golang, AWS, and natural language processing with Hugging Face models. Passionate about leveraging data-driven insights, I thrive in solving complex problems and continuously expanding my knowledge in analytics and AI-driven solutions.</p>
 
@@ -149,8 +192,17 @@
         <p class="text-sm">&copy; Created by Animesh Singh.</p>
     </footer>
     
+    <style>
+        pre[class*="language-"], code[class*="language-"] {
+            background: #091121 !important; /* Force Dark Blue Background */
+            color: #ffffff !important; /* White Text */
+            border-radius: 8px; /* Rounded Corners */
+        }
+    </style>
     <script  src="scripts/main.js"></script>
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 
 </body>
 </html>
